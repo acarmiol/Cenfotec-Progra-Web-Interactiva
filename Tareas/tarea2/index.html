@@ -1,0 +1,60 @@
+	<!DOCTYPE html> 
+	<html>
+	<head> 
+
+	<! --Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+	 <!--Angulare -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script> 
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
+
+	 	<!--Applicazione -->
+	<script src="js/app.js"></script> 
+	
+	</head> 
+	<body ng-app="chatApp"> 
+	   
+	<h3>Tarea CRUD</h3>
+	<h5>AngularJS + Firebase</h5>
+		    	
+<form action="" class="col-md-4">
+<div ng-controller="chatController">
+	<div class="form-group">
+		<label for="inputname">Name</label>
+		<input type="text" ng-model="newmessage.user" class="form-control col-md-12" id="inputname" placeholder="John Smith">
+	</div>
+	<div class="form-group">
+		<label for="inputmessage">Message</label>
+		<input type="text" ng-model="newmessage.text" class="form-control col-md-12" id="inputmessage" placeholder="Say what">
+	</div>
+	<br>
+	<br>
+  
+  <button ng-click="inserisci(newmessage)" class="btn btn-primary">Send</button>
+
+</form>
+<br>
+<br>
+
+
+  	<ul>
+  		<li ng-repeat="message in messages">
+  			{{message.user}} dice :{{message.text}}
+  		</li>
+  	</ul>
+</div>
+
+
+
+
+
+ 
+	</body> 
+	</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery UI</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  	<style>
+  	.bigbox{
+  		border: 3px solid gray;
+  		width: 800px;
+  		height: 400px;
+  		
+  		}
+  	.inner-box{
+  		border: 3px solid red;
+  		width: 200px;
+  		height: 200px;
+  		  		
+
+  		}
+  	</style>
+  	<script>
+  		$(function() {
+  			$('.inner-box').draggable({ containment: 
+  				'parent'});
+
+  			$('#droppable-box').droppable({
+  				drop: function(event, ui) {
+  					$(this).find('p').html('My Droppable box is in use')
+  					
+  				},
+  				out: function(event,ui){
+  					$(this).find('p').html('My Droppable box is')
+  				}
+  			})
+  		});
+  	</script>
+  	
+</head>
+<body>
+	<h1>JQuery UI - Test</h1>
+
+	<h2>Draggable</h2>
+	<div class="draggable bigbox">
+		<p class="inner-box">This is my draggable box</p>
+	</div>
+
+	<h2>Droppable</h2>
+	<div class="droppable bigbox">
+		<p class="inner-box">This is my draggable box</p>
+		<div id="droppable" class="inner-green">
+			<p>My Droppable box</p>
+		</div>
+
+	</div>
+	
+</body>
+</html>

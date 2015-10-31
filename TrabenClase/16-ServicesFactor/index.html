@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grocery Store</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myGrocery">
+
+	<div class="container">
+		<h1 class="text-center">Grocery Store</h1>
+		
+		<div class="row" ng-controller="GroceryListController">
+			<section class="col-sm-4">
+				<!-- formulario -->
+				<h2>Add your items here!</h2>
+				<form ng-submit="()">
+					<div class="form-group">
+						<label for="name">Name: </label>
+						<input name="name" type="text" ng-model="newItem.name" >
+					</div>
+					<div class="form-group">
+						<label for="cant">Quantity: </label>
+						<input name="cant" type="number" ng-model="newItem.quantity" >
+					</div>
+					<button type="submit" class="btn btn-default">Add</button>
+				</form>
+			</section>
+			<section class="col-sm-8">
+				<!-- listaItems -->
+				<ul class="list-group">
+					<li class="list-group-item" ng-if="items.length < 1">
+						There is no items!
+					</li>
+					<li class="list-group-item" ng-repeat="item in items" 
+						ng-init="edit=false" ng-dblclick="edit=!edit" >
+
+						<div class="row">
+							<span class="badge">{{item.quantity}}</span>
+							{{item.name}}
+							<button ng-click="removeItem(item)"> X </button>
+						</div>
+						<div class="row" ng-if="edit">
+							<form ng-submit="updateItem(item, newName, newQuantity)">
+								<div class="form-group">
+									<label for="name">Name: </label>
+									<input name="name" type="text" 
+										ng-model="newName" 
+										ng-init="newName = item.name" >
+								</div>
+								<div class="form-group">
+									<label for="cant">Quantity: </label>
+									<input name="cant" type="number" 
+										ng-model="newQuantity" 
+										ng-init="newQuantity = item.quantity" >
+								</div>
+								<button type="submit" class="btn btn-default">Edit</button>
+							</form>
+						</div>
+
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+	<!-- Custom JS -->
+	<script src="app.js"></script>
+</body>
+</html>

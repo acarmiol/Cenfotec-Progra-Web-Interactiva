@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900);
+
+body{
+    background-color: deepskyblue;
+    text-align: center;
+
+}
+
+h2{
+
+    font-size: 1.9em;
+    font-family: 'Roboto', sans-serif;
+    color: #E7B89F;
+
+
+}
+
+@media (max-width: 600px) {
+    body{
+        background-color: chartreuse;
+    }
+    img{
+        width: 250px;
+        height: 350px;
+    }
+
+}

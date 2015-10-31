@@ -1,0 +1,28 @@
+{
+  "name": "08-Custome-polymer-controlller",
+  "version": "0.1.0",
+  "description": "demo of custom components",
+  "main": "app.js",
+  "moduleType": [],
+  "keywords": [
+    "polymer",
+    "demo",
+    "practice"
+  ],
+  "authors": [
+    "'Adrian Carmiol <acarmiolu@ucenfotec.ac.cr>'"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "tarea6",
+  "version": "0.0.0",
+  "description": "polymer con dashboard de ventanas",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "adrian carmiol"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0",
+    "google-chart": "GoogleWebComponents/google-chart#~1.0.4"
+  }
+}

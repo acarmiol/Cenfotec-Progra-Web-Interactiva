@@ -33,12 +33,13 @@
     <!-- Polymer google-youtube-->
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     <link rel="import" href="bower_components/google-youtube/demo/demo.elements.html">
+    <link  rel="import" href="bower_components/pwi-localdom/pwi-localdom.html">
 
     
     
 </head>
 <body ng-app="chatApp" ng-controller="chatController">
-    <nav class="navbar navbar-inverse ">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
           
           <div class="row"> 
@@ -58,6 +59,7 @@
             <li class="active"><a href="#"><i class="fa fa-camera"></i></a></li>
             <li><a href="#"><i class="fa fa-weixin"></i></a></li>
             <li><a href="#"><i class="fa fa-video-camera"></i></a></li>
+              <li><a href="#"><i class="fa fa-save"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
                   
@@ -69,7 +71,7 @@
     </nav><!--    End of navbar-->
     
     
-	 
+    <div class="between"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-2">
@@ -97,52 +99,37 @@
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-2">
-                <label class="control-label">Select File</label>
-                <input id="input-1" type="file" class="file">
+                <!--3rd box-->
+                    <pwi-localdom></pwi-localdom>
             </div>
             
             
+            
+            <div class="col-md-4 cuartacaja">
+                
+                <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+                     <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+                     <g>
+                      <title>Layer 1</title>
+                      <rect fill="#962fda" stroke="#f7efef" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"               x="257" y="139" width="0" height="7" id="svg_3"/>
+                      <ellipse fill="#962fda" stroke="#962fda" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"            cx="172.5" cy="235" id="svg_6" rx="39.5" ry="34"/>
+                      <rect fill="#d8d8d8" stroke="#d8d8d8" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"                x="147" y="213" width="51" height="40" id="svg_7"/>
+                      <ellipse fill="#962fda" stroke="#d8d8d8" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"            cx="171.5" cy="240.5" id="svg_8" rx="15.5" ry="11.5"/>
+                      <rect fill="#962fda" stroke="#d8d8d8" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"               x="147" y="213" width="30" height="16" id="svg_10"/>
+                     </g>
+                </svg>
             </div>
-            <div class="col-md-4">
-                <!--4to box-->
-            </div>
+        </div>
     </div>
     
     
         
 
   
-    <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
-         <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
-         <g>
-          <title>Layer 1</title>
-          <rect fill="#962fda" stroke="#f7efef" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"               x="257" y="139" width="0" height="7" id="svg_3"/>
-          <ellipse fill="#962fda" stroke="#962fda" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"            cx="172.5" cy="235" id="svg_6" rx="39.5" ry="34"/>
-          <rect fill="#d8d8d8" stroke="#d8d8d8" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"                x="147" y="213" width="51" height="40" id="svg_7"/>
-          <ellipse fill="#962fda" stroke="#d8d8d8" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"            cx="171.5" cy="240.5" id="svg_8" rx="15.5" ry="11.5"/>
-          <rect fill="#962fda" stroke="#d8d8d8" stroke-width="5" stroke-linejoin="null" stroke-linecap="null"               x="147" y="213" width="30" height="16" id="svg_10"/>
-         </g>
-    </svg>
     
-    <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
- <g>
-  <title>Layer 1</title>
-  <image xlink:href="http://icons.iconarchive.com/icons/custom-icon-design/mono-general-1/128/save-icon.png" id="svg_1" height="284" width="284" y="14.999984" x="18"/>
- </g>
-</svg>
-        
-<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
- <g display="inline">
-  <title>Layer 2</title>
-  <rect id="svg_7" height="281.999999" width="294" y="3" x="3" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="#000000" fill="#000000"/>
- </g>
- <g>
-  <title>Layer 1</title>
-  <image xlink:href="http://www.iconsplace.com/icons/preview/white/save-256.png" id="svg_2" height="256" width="256" y="13" x="22"/>
- </g>
-</svg>        
+    
+  
+    
         
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

@@ -10,6 +10,9 @@ body{
 .navbar-nav{
     float: right;
 }
-.col-md-4{
-    
+.cuartacaja{
+    background: #323232;
+}
+.between{
+    height: 75px;
 }

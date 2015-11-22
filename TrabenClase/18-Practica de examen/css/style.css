@@ -1,0 +1,22 @@
+body{
+    background: #FFF;
+    width: auto;
+}
+
+.navbar{
+    padding-top: 25px;
+}
+.navbar-brand{
+    float: left;
+}
+
+.navbar-nav{
+    float: right;
+}
+
+
+/*SVG button*/
+
+
+
+

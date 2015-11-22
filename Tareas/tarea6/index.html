@@ -19,6 +19,13 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- custom polymer -->
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link  rel="import" href="bower_components/pwi-localdom/pwi-localdom.html">
+    <link rel="import" href="bower_components/google-chart/google-chart.html">
+
+
+
   </head>
 
   <body>
@@ -45,18 +52,55 @@
     </nav>
 
     <div class="container">
-
-      <div class="starter-template">
-        <h1>Tarea 6 Custom polymer</h1>
-        <p class="lead">Hacer un custom polymer que funcione como un dashboard de ventanas.  El polymer contenedor debe de usar bootstrap, precisamente la característica del grid, para funcionar responsive.   El polymer tipo ventana debe poder aceptar cualquier html de contenido y usar jqueryui, específicamente la propiedad dragable, para poder moverse e intercambiarse</p>
+      <div class="row">
+        <pwi-localdom></pwi-localdom>
       </div>
-
-    </div><!-- /.container -->
+    </div><!-- /.container end -->
 
     <section>
       <div class="container">
         <div class="row">
-          <p>Hello</p>
+            <div class="col-md-4">
+                <google-chart
+    cols='[{"label": "Data", "type": "string"},{"label": "Value", "type": "number"}]'
+    rows='[["Something", 1]]'>
+  </google-chart>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+                <google-chart
+    id='mutating_chart'
+    type='column'
+    options='{"title": "Random data",
+              "vAxis": {"minValue" : 0, "maxValue": 10},
+              "animation": {"duration": "1000"}}'
+    cols='[{"label": "Data", "type": "string"},{"label": "Value", "type": "number"}]'
+    rows='[["Col1", 5.0],["Col2", 5.0],["Col3", 5.0]]'>
+  </google-chart>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <google-chart
+      type="pie"
+      id="selection-chart"
+      options='{"title": "Distribution of days in 2001H1"}'
+      cols='[{"label": "Month", "type": "string"},{"label": "Days", "type": "number"}]'
+      rows='[["Jan", 31],["Feb", 28],["Mar", 31],["Apr", 30],["May", 31],["Jun", 30]]'>
+    </google-chart>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+                <google-chart
+    type='column'
+    options='{"title": "Inventory"}'
+    data='[["Year", "Things", "Stuff"],
+           ["2004", 1000, 400],
+           ["2005", 1170, 460],
+           ["2006", 660, 1120],
+           ["2007", 1030, 540]]'>
+  </google-chart>
+                
+            </div>
         </div>
         
       </div>
@@ -73,7 +117,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     
     
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+   
 
     
     <script src="js/logic.js"></script>

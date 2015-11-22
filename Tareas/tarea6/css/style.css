@@ -17,3 +17,28 @@ google-chart {
       position: relative;
       top: 50%;
     }
+
+
+code {
+      color: #007000;
+    }
+
+    google-chart {
+      height: 300px;
+      width: 400px;
+    }
+
+    #selection-demo {
+      position: relative;
+      height: 300px;
+    }
+
+    #selection-chart {
+      float: left;
+    }
+
+    #selection-display {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+    }

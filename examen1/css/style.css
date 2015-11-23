@@ -11,8 +11,16 @@ body{
     float: right;
 }
 .cuartacaja{
-    background: #323232;
+    
+    height: 150px;
+}
+svg{
+    margin-top: -150px;
 }
 .between{
     height: 75px;
+}
+.deslizar{
+    overflow: scroll;
+    height: 420px;
 }

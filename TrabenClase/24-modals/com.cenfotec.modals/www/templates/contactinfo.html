@@ -1,0 +1,21 @@
+<ion-modal-view id="contactinfo">
+	<ion-header-bar class="bar-energized">
+		<h1 class="title">Edit contact</h1>
+	</ion-header-bar>
+	<ion-content class="padding">
+		<div class="list">
+			<label class="item item-input">
+				<span class="input-label">Name</span>
+				<input type="text" placeholder="test" ng-model="contact.name">
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Info</span>
+				<input type="text" placeholder="test" ng-model="contact.info">
+			</label>
+			<button class="button button-full button-energized" ng-click="closeModal()" >
+				Close
+			</button>
+			
+		</div>
+	</ion-content>
+</ion-modal-view>

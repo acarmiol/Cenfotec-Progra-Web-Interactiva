@@ -1,4 +1,25 @@
 angular.module('starter.services', [])
+.factory('Shopping', function($firebaseArray){
+    var ref = new Firebase('https://shopping506.firebaseio.com/');
+    var purchase = function(id){
+        ref.child(id).child('status').set('purchased');
+    };
+    return {
+        list: $firebaseArray(ref)
+        purchase:purchase
+    };
+})
+
+.factory('Blog', function($http){
+    var function getposts(){
+        return $http.get('https://www.googleapis.com/blogger/v3/blogs/3213900/posts&key=YOUR-API-KEY');
+    };
+    
+    return {
+        getposts: getposts
+    };
+})
+
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array

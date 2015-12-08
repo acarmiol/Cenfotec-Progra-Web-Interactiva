@@ -1,6 +1,11 @@
 body {
   padding-top: 50px;
 }
+.homelogo{
+	width: 35px;
+	height: 35px;
+	background-color: white;
+}
 .em-text{
 	color:#1caa98 !important;
 }
@@ -11,7 +16,7 @@ section{
 	padding: 40px 0 40px 0;
 }
 .jumbotron{
-	background: #1b222a url(../img/site_showcase_bg.jpg) no-repeat top center ;
+	background: #f8f9fd ;
 	color: #fff;
 	height: 500px;
 	overflow: none;

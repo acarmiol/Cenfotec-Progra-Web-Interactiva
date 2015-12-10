@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>An example with images sliding from right to left</title>
+    <style>
+      #myslider { width:612px; height:612px; }
+    </style>
+  </head>
+  <body>
+    <div id="myslider" style="width:400px; height:200px">
+      
+      <img src="http://lorempixel.com/400/200/animals/1/"/>
+      <img src="http://lorempixel.com/400/200/animals/2"/>
+      <img src="http://lorempixel.com/400/200/animals/3"/>
+    </div>
+     
+  </body>
+  <script src="../src/simpleslider.js"></script>
+  <script>
+    var imgSlider = new SimpleSlider(
+      document.getElementById('myslider'),
+      {
+        autoPlay: true,
+        transitionProperty:'left',
+        startValue:'612px',
+        visibleValue:'0px',
+        endValue:'-612px',
+        transitionDelay: 2,
+        transitionDuration: 1
+      }
+    );
+  </script>
+</html>

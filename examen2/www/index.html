@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+   
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/ng-cordova/dist/ng-cordova.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="app">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">PWI Examen2</h1>
+      </ion-header-bar>
+      <ion-content ng-controller="CameraCtrl">
+        <div class="list card">
+          <div class="item item-image">
+            <img ng-src="{{pictureUrl}}">
+          </div>
+        </div>
+          <div class="padding">
+          <button ng-click="takePicture()"
+            class="button button-calm"><i class="ion-camera "></i></button>
+            <button
+            class="button button-energized"><i class="ion-videocamera "></i></button>
+            <button
+            class="button button-assertive"><i class="ion-checkmark-circled "></i></button>
+            
+        </div>
+        <div class="padding">
+            <p>Vivamus venenatis tortor sed leo malesuada convallis. Ut feugiat magna laoreet, tempus leo ut, egestas nunc. Aliquam placerat ac enim non interdum. Quisque varius justo mi, ut hendrerit enim mattis non. Sed mollis diam et congue vestibulum. Etiam euismod, turpis ut scelerisque viverra, nisi orci luctus arcu, at ornare sem enim ut est. Fusce faucibus nisi turpis, eget suscipit massa tempus in. Aenean id ante eget metus fringilla viverra sed vitae elit. Aenean vel faucibus quam, id ultricies tortor.
+
+</p>
+          </div>
+
+        <div class="list">
+          <h1 >Pics Info</h1>
+            </div>
+        
+        <div>
+            
+          </div>
+          
+      </ion-content>
+    </ion-pane>
+
+  </body>
+</html>

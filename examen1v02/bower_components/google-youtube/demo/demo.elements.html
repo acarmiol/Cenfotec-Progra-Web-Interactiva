@@ -2,7 +2,6 @@
 <link rel="import" href="../google-youtube.html">
 
 
-
 <dom-module id="demo-element">
   <template id="page-template">
     <style>
@@ -11,12 +10,6 @@
       }
     </style>
     
-    
-    <div>
-      <label for="videoId"></label>
-      <input id="videoId" value="B7QwwrWDPwk">
-      <button id="cue-video" on-click="handleCueVideo" class="btn btn-success"><i class="fa fa-upload"></i></button>
-    </div>
     <google-youtube id="googleYouTube"
                     playsupported="{{playSupported}}"
                     video-id="QugLFzedHzk"
@@ -29,7 +22,9 @@
                     on-google-youtube-state-change="handleStateChange"
                     on-google-youtube-error="handleYouTubeError">
     </google-youtube>
+
     <br>
+
     <div>
       <button id="play-video"
         disabled="{{computePlayDisabled(state, playSupported)}}"
@@ -37,11 +32,15 @@
       ><i class="fa fa-play"></i></button>
       <button id="pause-video"
         disabled="{{computePauseDisabled(state)}}"
-        on-click="handlePauseVideo" class="btn btn-danger"
-      ><i class="fa fa-pause"></i></button>
+        on-click="handlePauseVideo"
+      class="btn btn-danger"><i class="fa fa-pause"></i></button>
     </div>
 
-    
+    <div>
+      <label for="videoId">Video ID:</label>
+      <input id="videoId" value="">
+        <button id="cue-video" on-click="handleCueVideo" class="btn btn-success"><i class="fa fa-upload"></i></button>
+    </div>
 
     
   </template>
@@ -84,9 +83,9 @@
       this.$.googleYouTube.pause();
     },
     handleCueVideo: function(ev) {
-      this.$.googleYouTube.videoid = this.$.videoId.value;
+      this.$.googleYouTube.videoId = this.$.videoId.value;
     }
   });
-
 </script>
+
 

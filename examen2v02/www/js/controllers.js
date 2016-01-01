@@ -20,7 +20,7 @@ angular.module('camapp.controllers', [])
     	if(mm<10) {
     	    mm='0'+mm
     	} 
-    	today = mm+'/'+dd+'/'+yyyy+' - '+hour+':'+minutes;
+    	today = mm+'-'+dd+'-'+yyyy+' // '+hour+':'+minutes;
     	
     	
     	$('#loremImage').attr('src', uri);
